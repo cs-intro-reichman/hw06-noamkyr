@@ -13,11 +13,17 @@ import java.awt.Color;
 public class Editor3 {
 
 	public static void main (String[] args) {
+
+		// get the params from the user
 		String source = args[0];
 		String target = args[1];
 		int n = Integer.parseInt(args[2]);
-		Color[][] sourceImage = Runigram.read(source);
+
+		// get the images from the files
 		Color[][] targetImage = Runigram.read(target);
+		Color[][] sourceImage = Runigram.read(source);
+
+		// print the scaled image after call the function scaling
 		Runigram.setCanvas(sourceImage);
 		Runigram.morph(sourceImage, targetImage, n);
 	}

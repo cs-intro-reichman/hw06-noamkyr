@@ -10,11 +10,17 @@ import java.awt.Color;
 public class Editor2 {
 
 	public static void main (String[] args){
+		// get from the user the filename
 		String fileName = args[0];
+
+		// get the width and the height from the user
 		int width = Integer.parseInt(args[1]);
 		int height = Integer.parseInt(args[2]);
+
+		// get the original image from the file using read
 		Color[][] imageIn = Runigram.read(fileName);
 		Color[][] scaledImage = Runigram.scaled(imageIn, width, height);
+
 		// Displays the source image
 		Runigram.setCanvas(imageIn);
 		Runigram.display(imageIn);
