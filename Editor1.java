@@ -12,10 +12,15 @@ import java.awt.Color;
 public class Editor1 {
 
 	public static void main (String[] args){
-		String fileName = args[0];
-		String action = args[1];
+		//String fileName = args[0];
+		//String action = args[1];
 		// Reads the input image and creates an empty output image
-		Color[][] imageIn = Runigram.read(fileName);	
+
+		String fileName = "ironman.ppm";
+		String action = "gs";
+
+
+		Color[][] imageIn = Runigram.read(fileName);
 		Color[][] imageOut = null;	
 		// Applies the specified image processing function										
 		if (action.equals("fh")) {

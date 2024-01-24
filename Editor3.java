@@ -13,11 +13,17 @@ import java.awt.Color;
 public class Editor3 {
 
 	public static void main (String[] args) {
-		String source = args[0];
-		String target = args[1];
-		int n = Integer.parseInt(args[2]);
-		Color[][] sourceImage = Runigram.read(source);
+		//String source = args[0];
+		//String target = args[1];
+
+		//int n = Integer.parseInt(args[2]);
+
+		String source = "cake.ppm";
+		String target = "ironman.ppm";
+		int n = 50;
+
 		Color[][] targetImage = Runigram.read(target);
+		Color[][] sourceImage = Runigram.read(source);
 		Runigram.setCanvas(sourceImage);
 		Runigram.morph(sourceImage, targetImage, n);
 	}
